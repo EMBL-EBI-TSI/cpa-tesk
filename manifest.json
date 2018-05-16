@@ -1,8 +1,8 @@
 {
-    "applicationName": "Kubernetes",
+    "applicationName": "Tesk",
     "contactEmail": "gianni@ebi.ac.uk",
-    "about": "Kubernetes On-Premises cluster",
-    "version": "0.3",
+    "about": "Tesk On-Premises cluster",
+    "version": "0.1",
     "cloudProviders": [
         {
             "cloudProvider": "OSTACK",

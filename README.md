@@ -1,6 +1,7 @@
-# EBI Cloud Portal - Kubernetes
-Kubernetes On-Premises virtual machine.  
-It uses the official CentOS 7.4 iso image and configures a Kubernetes cluster using an Ansible role.
+# EBI Cloud Portal - TESK
+
+Tesk for Kubernetes On-Premises virtual machine.  
+It uses the official CentOS 7.4 iso image and configures a Kubernetes cluster using an Ansible role, finally it installs TESK.
 Official Ubuntu iso image is also supported specifying a different `disk_image_name`.  
 For the connection, your local `~/.ssh/id_rsa` will be used  by default.  
 A different location can be specified for your private SSH key, by setting the optional `parameter`: **`user_private_key_path`** in the `Deployment parameters` section.
@@ -17,7 +18,7 @@ In addition to the `Cloud Credentials` parameters defined in the
 
 | Parameter name    | Parameter value (example)         |
 | ---               | ---                               |
-| `OS_TENANT_ID `   | `a123b45c678d901efg23h4i5jkl6m789`|
+| `OS_TENANT_ID`   | `a123b45c678d901efg23h4i5jkl6m789` |
 | `OS_REGION_NAME ` | `RegionOne`                       |
 
 
@@ -32,11 +33,11 @@ Create a new entry in the `Deployment Parameters` section.
 This application can be used in combination with one of the following  :  
 [https://github.com/EMBL-EBI-TSI/cpa-network](https://github.com/EMBL-EBI-TSI/cpa-network)  
 
-###  Default values
+### Default values
 
 | Parameter name          | Parameter value     |
 | ---                     | ---                 |
-| `name`                  | `kubernetes`        |
+| `name`                  | `tesk`        |
 | `node_instances`        | 2                   |
 | `deployment_path`       | `.`                 |
 | `disk_image_name`       | `centos-7.4`        |

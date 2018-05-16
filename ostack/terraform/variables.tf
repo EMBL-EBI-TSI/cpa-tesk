@@ -1,6 +1,6 @@
 #### Deployment ####
 variable "name" {
-  default     = "kubernetes"
+  default     = "tesk"
   description = "The name of the deployment"
 }
 
