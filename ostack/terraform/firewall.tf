@@ -38,6 +38,13 @@ resource "openstack_compute_secgroup_v2" "k8s-security" {
   }
 
   rule {
+    from_port   = 30977
+    to_port     = 30977
+    ip_protocol = "tcp"
+    cidr        = "0.0.0.0/0"
+  }
+
+  rule {
     from_port   = 1
     to_port     = 65535
     ip_protocol = "tcp"
