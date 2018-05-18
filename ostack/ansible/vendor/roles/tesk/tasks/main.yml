@@ -4,20 +4,24 @@
   yum:
     name: git
     state: present
+  become: true
 
 - name: Install virtualenv
   yum:
     name: python-virtualenv
     state: present
+  become: true
 
 - name: Install pip
   easy_install:
     name: pip
     state: latest
+  become: true
 
 - name: Install shinto-cli python package.
   pip:
     name: shinto-cli
+  become: true
 
 - name: Clone tesk repository in the remote host
   git:
