@@ -1,0 +1,41 @@
+---
+# tasks file for ansible-tesk
+- name: Install git
+  yum:
+    name: git
+    state: present
+
+- name: Install virtualenv
+  yum:
+    name: python-virtualenv
+    state: present
+
+- name: Install pip
+  easy_install:
+    name: pip
+    state: latest
+
+- name: Install shinto-cli python package.
+  pip:
+    name: shinto-cli
+
+- name: Clone tesk repository in the remote host
+  git:
+    repo: "{{ git_repo_src }}"
+    dest: "{{ git_repo_dest }}"
+
+- name: Find and replace the external_ip value
+  lineinfile:
+    path: "{{ ansible_env.HOME}}/tesk/deployment/ingress/config.ini"
+    regexp: "^external_ip="
+    line: "external_ip={{ hostvars['bastion']['ansible_ssh_host'] }}"
+
+- name: Generate yaml kubernetes files form templates
+  shell: j2 -g "*.j2" config.ini
+  args:
+    chdir: "{{ ansible_env.HOME}}/tesk/deployment/ingress/"
+
+- name: Deploy Tesk
+  shell: kubectl create -f .
+  args:
+    chdir: "{{ ansible_env.HOME}}/tesk/deployment/ingress/"

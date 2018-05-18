@@ -252,6 +252,14 @@
       lineinfile:
         path: /home/centos/.bash_profile
         line: "source <(kubectl completion bash)"
+
+- hosts: kube-master
+  name: Install tesk
+  any_errors_fatal: true
+  become: true
+  roles:
+    - role: tesk
+
 - hosts: kube-node
   name: Change authorized public keys in the nodes
   gather_facts: no
