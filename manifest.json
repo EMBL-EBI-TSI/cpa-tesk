@@ -2,7 +2,7 @@
     "applicationName": "Tesk",
     "contactEmail": "gianni@ebi.ac.uk",
     "about": "Tesk On-Premises cluster",
-    "version": "0.4",
+    "version": "0.5",
     "cloudProviders": [
         {
             "cloudProvider": "OSTACK",
