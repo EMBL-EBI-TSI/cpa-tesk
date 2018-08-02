@@ -37,7 +37,7 @@ echo -e "\n\t${CYAN}Terraform apply${NC}\n"
 terraform apply --state=${DPL}'terraform.tfstate' ${APP}'/ostack/terraform'
 
 # Extract the internal IP of the Master instance
-export k8s-master_private_ip="$(terraform output -state=${DPL}'terraform.tfstate' k8s-master_private_ip)"
+export k8s_master_private_ip="$(terraform output -state=${DPL}'terraform.tfstate' k8s_master_private_ip)"
 
 # Install Ansible requirements with ansible galaxy
 echo -e "\n\t${CYAN}Install Ansible requirements with ansible galaxy${NC}\n"
