@@ -24,8 +24,13 @@ In addition to the `Cloud Credentials` parameters defined in the
 
 ## Requirements
 A network is expected to be shared with other virtual machines, therefore is not provided and destroyed with this terraform description.  
-You need to set up the name of the network inside of the terraform.tfvars file.  
-If you want to provide a new network you can use the `cpa-network` terraform description.
+If you want to provide a new network you can use the cpa-network terraform description.
+
+You need to provide the name of the network in the ECP in:  
+`Profile`->`Deployment Parameters`  
+Adding a new `Parameter` named:
+
+`network_name`
 
 ## Instructions
 Create a new entry in the `Deployment Parameters` section.
