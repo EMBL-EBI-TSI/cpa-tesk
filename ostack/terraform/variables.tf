@@ -56,3 +56,7 @@ variable "user_private_key_path" {
   type        = "string"
   default     = "~/.ssh/id_rsa"
 }
+
+variable "ip_address" {
+  description = "(Optional) The IP address of the floating IP."
+}

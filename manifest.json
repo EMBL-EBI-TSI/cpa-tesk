@@ -10,7 +10,8 @@
         }
     ],
     "inputs": [
-        "node_instances"
+        "node_instances",
+        "ip_address"
     ],
     "deploymentParameters": [
         "disk_image_name",

@@ -42,8 +42,9 @@ This application can be used in combination with one of the following  :
 
 | Parameter name          | Parameter value     |
 | ---                     | ---                 |
-| `name`                  | `tesk`        |
+| `name`                  | `tesk`              |
 | `node_instances`        | 2                   |
+| `ip_address`            | ``                  |
 | `deployment_path`       | `.`                 |
 | `disk_image_name`       | `centos-7.4`        |
 | `machine_type`          | `s1.tiny`           |
