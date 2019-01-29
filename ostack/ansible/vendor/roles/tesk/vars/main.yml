@@ -2,3 +2,4 @@
 # vars file for ansible-tesk
 git_repo_src: "https://github.com/EMBL-EBI-TSI/TESK.git"
 git_repo_dest: "{{ ansible_env.HOME}}/tesk"
+master_node_remote_user: centos
