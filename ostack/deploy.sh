@@ -50,4 +50,4 @@ echo "export ANSIBLE_REMOTE_USER=${ANSIBLE_REMOTE_USER}"
 
 # Launch Ansible playbook
 echo -e "\n\t${CYAN}Launch Ansible playbook${NC}\n"
-ansible-playbook -e deployment_path=${TF_VAR_deployment_path} playbook.yml
+ansible-playbook -e deployment_path=${TF_VAR_deployment_path} -e ansible_ssh_user=${ANSIBLE_REMOTE_USER} playbook.yml
