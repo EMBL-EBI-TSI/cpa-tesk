@@ -1,3 +1,6 @@
+> **Note**
+> The EBI Cloud Portal has been retired and its code base is no longer updated.
+
 # EBI Cloud Portal - TESK
 
 Tesk for Kubernetes On-Premises virtual machine.  
